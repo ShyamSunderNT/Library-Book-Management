@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+
+.Title h1{
+    background-color: rgb(202, 23, 23);
+    margin: 0px auto 15px auto ;
+    padding: 10px;
+    border-radius: 15px ;
+   width: fit-content;
+}
+
+/* Book card desions */
+
+.book-Card{
+    position: relative;
+    z-index: 100 ;
+    color: #b92e2e;
+    text-shadow: 0 0 20px ;
+    background: none !important;
+}
+
+
+
+
+.text-content{
+    z-index: 2;
+ }
+ .book-title{
+    color: rgb(27, 192, 129);
+    text-decoration: underline;
+ }
+ .book-description{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgb(148, 148, 148), -1px -1px 4px white;
+ }
+
+.homeWrapper{
+   margin: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+.Table-container{
+    margin: 0 10px;
+    overflow-x: auto;
+}
+.BookBox{
+    transition: 0.4s;
+    cursor: pointer;
+}
+.edit-form{
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+}
+
+.buttonGroup{
+    display: flex;
+    justify-content: space-around;
+}
+.formGroup{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   gap: 0 20px;
+}
+.formGroup input{
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .textContent-right{
+        width: 100%;
+    }
+    .textContent-left{
+        width: 100%;
+    }
+  }

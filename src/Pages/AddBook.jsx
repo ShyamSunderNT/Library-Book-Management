@@ -18,7 +18,6 @@ const AddBook = () => {
       ISBN: "",
       publicationDate: "",
       authorInfo: {
-        birthDate: "",
         biography: "",
       },
     },
@@ -33,7 +32,15 @@ const AddBook = () => {
         return isNaN(parsedDate) ? null : parsedDate;
       })
       .test('valid-date', 'Invalid date', (value) => value !== null),
+      // Biography validation
+      biography: Yup.string()
+        .required('Biography is required')
+        .test('word-count', 'Biography should have 25 words or fewer', value => {
+          const wordCount = value.trim().split(/\s+/).length;
+          return wordCount <= 25;
+        }),
 }),
+
   //  ISBN validation regex code
       ISBN: Yup.string()
         .required('ISBN is required')
@@ -126,6 +133,14 @@ const AddBook = () => {
             value={formik.values.ISBN} onBlur={formik.handleBlur} />
           {formik.touched.ISBN && formik.errors.ISBN && <div style={{color:"red"}}>{formik.errors.ISBN}</div>}
 
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Biography :</Form.Label>
+          <Form.Control as="textarea" rows={3} type="text" name="authorInfo.biography" id="biography"
+            placeholder="Enter Author biography" onChange={formik.handleChange}value={formik.values.biography}
+            onBlur={formik.handleBlur} />
+          {formik.touched.authorInfo && formik.errors.authorInfo ? (<div style={{color:"red"}}>
+            {formik.errors.authorInfo.biography}</div>) : null}
         </Form.Group>
        
       </div>

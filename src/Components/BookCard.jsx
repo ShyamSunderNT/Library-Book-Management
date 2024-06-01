@@ -32,8 +32,14 @@ const BookCard = ({
           <b>ISBN : </b>
           {ISBN}
         </Card.Text>
-        
-        
+        <Card.Text className="book-description">
+          <b>Biography : </b>
+          <Button
+            onClick={() => navigate(`/full-details/${id}`)}
+          >
+            More
+          </Button>
+        </Card.Text>
       </Card.Body>
     </Card>
   );

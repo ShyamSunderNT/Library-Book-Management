@@ -33,39 +33,35 @@ const FullDetails = () => {
   return (
     <div className="container-fluid">
       <div className="container">
-        <div className="showMoreContainer">
-          <div className="showMoreCard">
-            <div className="text-content">
-              <p style={{ textDecoration: "underline", textAlign: "center" }}>
-                <b>Author Details : </b>
-              </p>
-              <div className="textContent-right">
-                <p>
-                  <b className="bold-Text">Author Name : </b>
-                  {name}
-                </p>
-                <p>
-                  <b className="bold-Text">Date of birth : </b>
-                  {Dob}{" "}
-                </p>
-                <p>
-                  <b className="bold-Text">Biography : </b>
-                  {biography}{" "}
-                </p>
-                <p>
-                  <b className="bold-Text">Book Title : </b>
-                  {tiltle}{" "}
-                </p>
-                <p>
-                  <b className="bold-Text">Publication Date : </b>
-                  {published}{" "}
-                </p>
-                <p>
-                  <b className="bold-Text">ISBN : </b>
-                  {isbn}{" "}
-                </p>
-              </div>
-            </div>
+        <div className="text-content">
+          <p style={{ textDecoration: "underline", textAlign: "center" }}>
+            <b>Author Details : </b>
+          </p>
+          <div className="textContent-right">
+            <p>
+              <b className="bold-Text">Author Name : </b>
+              {name}
+            </p>
+            <p>
+              <b className="bold-Text">Date of birth : </b>
+              {Dob}{" "}
+            </p>
+            <p>
+              <b className="bold-Text">Biography : </b>
+              {biography}{" "}
+            </p>
+            <p>
+              <b className="bold-Text">Book Title : </b>
+              {tiltle}{" "}
+            </p>
+            <p>
+              <b className="bold-Text">Publication Date : </b>
+              {published}{" "}
+            </p>
+            <p>
+              <b className="bold-Text">ISBN : </b>
+              {isbn}{" "}
+            </p>
           </div>
         </div>
       </div>

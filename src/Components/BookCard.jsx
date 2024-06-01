@@ -34,7 +34,7 @@ const BookCard = ({
         </Card.Text>
         <Card.Text className="book-description">
           <b>Biography : </b>
-          <Button
+          <Button className="Click"
             onClick={() => navigate(`/full-details/${id}`)}
           >
             More
